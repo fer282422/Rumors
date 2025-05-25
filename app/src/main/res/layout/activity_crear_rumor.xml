@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CrearRumorActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingresa tu rumor favorito"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categoria"/>
+    <Spinner
+        android:id="@+id/spnCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Titulo"/>
+    <EditText
+        android:id="@+id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ej. Molino protestando..."
+        android:textSize="28sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descripcion"/>
+    <EditText
+        android:id="@+id/txtDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ej. Se vio al presidente..."
+        android:inputType="textMultiLine"
+        android:textSize="28sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipo de Rumor"/>
+    <RadioGroup
+        android:id="@+id/rgbTipoRumor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rbtCasiVerdad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Casi verdad"/>
+        <RadioButton
+            android:id="@+id/rbtConfirmado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirmadisimo"/>
+        <RadioButton
+            android:id="@+id/rbtMentira"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Me lo invente"/>
+    </RadioGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalles complementarios"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <CheckBox
+            android:id="@+id/chkPeriodico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lo vi en periodico"/>
+        <CheckBox
+            android:id="@+id/chkFoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tengo una foto!"/>
+        <CheckBox
+            android:id="@+id/chkVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tengo un video"/>
+        <CheckBox
+            android:id="@+id/chkRedes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lo vi en redes"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar Rumor"
+        android:onClick="GuardarRumor"/>
+
+</LinearLayout>
